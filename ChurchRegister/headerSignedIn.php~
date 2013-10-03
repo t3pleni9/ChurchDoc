@@ -1,0 +1,13 @@
+<link href="style.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="css.css" /><div style="border:1px solid black">
+<div class="MainHeader">Archdiocese Of Delhi</div>
+<div style="text-align:right">
+<?php
+    if($user == NULL) {
+        echo  "<a href=\"index.php\">LOGIN</a>";
+    } else {
+        echo  "<a href=\"logout.php\">LOGOUT</a>";
+    }   
+?>
+   </div></div>
+

@@ -1,0 +1,35 @@
+<html>
+<head>
+   
+</head>
+    
+    <title>Register-Home Page</title>
+    <body>
+        <?php 
+            require_once "header.php";
+            $auth = validateSession();
+            if($auth == true) {
+                $perm = $_SESSION["userPermission"];                
+                echo "                     
+                <div id=\"tile\">
+                <table style=\"display:table-cell;\">           
+                    </hr>
+                    <tbody>
+                        <tr>".
+                            getRegister("bap", $perm,'line1').
+                            getRegister("mar", $perm,'line2').
+                            getRegister("bur", $perm,'line3').
+                            getRegister("war", $perm,'line4').
+                            getRegister("fam", $perm,'line5').
+                            getRegister("per", $perm,'line6').
+                            getRegister("usr", $perm,'line7').
+                            getRegister("par", $perm,'line8').
+                        "</tr>                           
+                    </tbody>
+                </table> 
+                </div>  
+                <div id=\"body\"></div>";
+             }
+        ?>     
+    </body>
+</html>

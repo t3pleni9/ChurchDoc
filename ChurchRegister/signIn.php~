@@ -1,0 +1,54 @@
+<html>
+<head>
+   
+</head>
+    
+    <title>Register - Sign In</title>
+    <body>
+    
+        <?php 
+            require_once "header.php";
+        ?>
+        <script type='text/javascript'>javascript:Hide("authLink");</script>        
+        <div id="Logindiv" style="border-color:Black;border-style:solid;" class="white">       
+        <div id="divvalue">
+            <form name="login" action="validate.php" method=post>
+            <div id="loginGrid">
+                <table cellSpacing="2px"style="display:table-cell;">
+                    <thead>
+                        <tr>
+                            <th/>
+                            <th/>
+                        </tr>
+                    </thead>
+                    <tbody>                    
+                        <tr>
+                            <td><input name=userNameLabel class="tbNoBorder10" type="text" value="User Name" tabindex=-1 readonly/></td>
+                            <td><Input name="userName" class="tb10" type="text" value=""/></td>
+                        </tr>
+                        <tr>
+                            <td><input name=passwordLabel class="tbNoBorder10"  type="text" value="Password" tabindex=-1 readonly/></td>
+                            <td><Input name="password" class="tb10" type="password" value=""/></td>
+                        </tr>
+                        <tr>
+                        <td/>
+                            <td><input id=remMe name=remMe class="tbNoBorder10" type="checkbox" value="RememberMe"/>
+                            <input class="tbNoBorder10"value="Remember Me" type=text tabindex=-1 readonly/></td>                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td style="text-align:right">
+                            <input type=submit style="border:1px solid #d1c7ac;" class="tbNoBorder10" value="Login"/>
+                            <input type=button onclick="javascript:HideModalPopup('Logindiv');" style="border:1px solid #d1c7ac;" class="tbNoBorder10" value="Cancel"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            </form>
+        </div>
+        </div>
+</body>
+</html>
+    </body>
+</html>
+    

@@ -1,0 +1,18 @@
+<?php
+    require_once 'constants.php';
+    $auth = validateSession();
+    if($auth == true) {
+        $recordType = $_POST['recordType'];
+        if($recordType == "WardListParish") {
+            $parishId = $_POST['parishId'];
+            echo getWardDropDownWithParish($parishId, "ddlWard");
+        } else if($recordType == "MarriageMode") {
+            $mode = $_POST['mode'];
+            if($mode == "MAN") {
+                manualMarriageInput();
+            } else if($mode == "LIN") {
+                linkedMarriageInput();
+            } 
+    }
+?>
+    
